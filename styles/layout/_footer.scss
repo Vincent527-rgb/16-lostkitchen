@@ -1,0 +1,183 @@
+footer {
+    .wrapper {
+        width: 90%;
+        margin: auto;
+
+        .TLK-logo {
+            padding-top: 100px;
+            border-top: 1px solid black;
+            margin: 100px auto;
+
+            img {
+                max-width: 150px;
+            }
+        }
+
+        .footer-nav {
+            
+            ul {
+                padding: 0;
+            }
+            li {
+                display: block;
+                width: 100%;
+            }
+            > ul {
+                margin: 20px auto;
+                padding: 20px 0;
+                border-top: 1px solid #878785;
+                border-bottom: 1px solid #878785;
+            }
+            .open-menu-element {
+                position: relative;
+
+                &:hover {
+                    height: 170px;
+                    
+                    .sub-nav {
+                        display: flex;
+                    }
+                }
+            }
+            .sub-nav {
+                display: none;
+                position: absolute;
+                left: 20px;
+                flex-direction: column;
+
+                a {
+                    color: #878785;
+                    text-decoration: none;
+                    text-transform: uppercase;
+                    margin-top: 24px;
+        
+                    &::before, &::after {
+                        background-color: #878785;
+                    }
+                    &:hover {
+                        color: black;
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+        form {
+            border-bottom: 1px solid black;
+            padding: 20px 0;
+
+            input {
+                width: 80%;
+                font-size: 15px;
+                outline: none;
+                border: 0;
+            }
+            label {
+                text-transform: uppercase;
+                font-size: 12px;
+                cursor: pointer;
+
+                &:hover {
+                    color: #878785;
+                }
+            }
+        }
+        .social-network {
+            padding: 20px 0;
+
+            a {
+                display: inline-block;
+                margin-right: 10px;
+
+                img {
+                    width: 20px;
+                }
+
+                &:hover img {
+                    box-shadow: rgba(28, 28, 28, 0.5) 0px 0px 10px;
+                    border-radius: 50%;
+                }
+            }
+        }
+        .last-info {
+            padding: 20px 0;
+            border-top: rgba(35, 35, 35, 0.2) 1px solid;
+            font-size: 12px;
+            color: #878785;
+
+            small {
+                font-size: 13px;
+            }
+            a {
+                color: #878785;
+                font-weight: 700;
+
+                &:hover {
+                    color: black;
+                }
+            }
+        }
+        
+    }
+}
+
+@media screen and (min-width:960px) {
+    footer {
+        .wrapper {
+            margin-top: 200px;
+            max-width: 1400px;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+
+            .TLK-logo {
+                border-top: 0px;
+                margin: 0;
+                padding: 0;
+                width: 30%;
+                height: 235px;
+    
+                img {
+                    max-width: 150px;
+                }
+            }
+            .footer-nav {
+                width: 30%;
+
+                > ul {
+                    border-top: 0px;
+                    border-bottom: 0px;
+                }
+                .open-menu-element {
+                    position: relative;
+                }
+                .sub-nav {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    left: 0;
+
+                    a {
+                        color: #878785;
+                        text-decoration: none;
+                        text-transform: uppercase;
+                        margin-top: 24px;
+            
+                        &::before, &::after {
+                            background-color: #878785;
+                        }
+                        &:hover {
+                            color: black;
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            .form-network {
+                width: 40%;
+            }
+            .last-info {
+                width: 30%;
+            }
+        }
+    }
+}
